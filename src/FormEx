@@ -1,0 +1,15 @@
+import React, { useState } from 'react';
+const FormEx = () => {
+  const [username, setUsername] = useState('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Hello, ${username}!`);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}; 
+export default FormEx
